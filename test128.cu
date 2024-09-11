@@ -2,12 +2,16 @@
 #include <stdint.h>
 #include <math.h>
 #include <string>
-#include <cuda_runtime.h>
-#include <curand.h>
 
 #include <CUDASieve/cudasieve.hpp>
 #include <CUDASieve/host.hpp>
 
+#include <curand.h>
+#include <cuda_runtime.h>
+
+#ifndef __CUDA_ARCH__
+#define __CUDA_ARCH__
+#endif
 #include "cuda_uint128.h"
 #include "cuda_uint128_primitives.cuh"
 
